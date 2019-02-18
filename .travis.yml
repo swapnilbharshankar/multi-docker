@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t swapnil123/react-test -f ./client/Dockerfile.dev
+  - docker build -t swapnil123/react-test -f ./client/Dockerfile.dev .
 
 script:
   - docker run swapnil123/react-test npm test -- --coverage
